@@ -126,10 +126,12 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
  testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.And("it exists in a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("its at a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
- testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("it exists at the network share host", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
+ testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
  testRunner.Then("the application should load the file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -141,17 +143,19 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReadATextFileThatDoesntExistsFromANetworkShare()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read a text file that doesnt exists from a network share", ((string[])(null)));
-#line 27
-this.ScenarioSetup(scenarioInfo);
 #line 28
- testRunner.Given("I want to load a file called \"net_unexistent.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 29
- testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I want to load a file called \"net_unexistent.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.But("it doesnt exists in a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+ testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("its at a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
+ testRunner.But("it doesnt exists at the network share host", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+#line 33
+ testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
  testRunner.Then("the application should notify me the file doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -163,17 +167,19 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReadATextFileThatExistsFromAnInternetServer()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read a text file that exists from an internet server", ((string[])(null)));
-#line 34
-this.ScenarioSetup(scenarioInfo);
-#line 35
- testRunner.Given("I want to load a file called \"inet_scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 36
- testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 37
- testRunner.And("it exists in an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I want to load a file called \"inet_scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 38
- testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
+ testRunner.And("its at an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.And("it exists at the internet server", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+ testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
  testRunner.Then("the application should load the file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -185,17 +191,19 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReadATextFileThatDoesntExistsFromAnInternetServer()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read a text file that doesnt exists from an internet server", ((string[])(null)));
-#line 41
-this.ScenarioSetup(scenarioInfo);
-#line 42
- testRunner.Given("I want to load a file called \"404.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 43
- testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 44
- testRunner.But("it doesnt exists in an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+this.ScenarioSetup(scenarioInfo);
 #line 45
- testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I want to load a file called \"404.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 46
+ testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+ testRunner.And("its at an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 48
+ testRunner.But("it doesnt exists at the internet server", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+#line 49
+ testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
  testRunner.Then("the application should notify me the file doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

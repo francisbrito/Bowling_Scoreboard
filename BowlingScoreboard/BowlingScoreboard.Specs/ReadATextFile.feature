@@ -20,27 +20,31 @@ Scenario: Read a text file that doesnt exists from local file system
 Scenario: Read a text file that exists from a network share
 	Given I want to load a file called "net_scores.txt"
 	And I think its located at the path "/test_files/"
-	And it exists in a network share host called "10.0.0.1"
+	And its at a network share host called "10.0.0.1"
+	And it exists at the network share host
 	When I press load
 	Then the application should load the file
 
 Scenario: Read a text file that doesnt exists from a network share
 	Given I want to load a file called "net_unexistent.txt"
 	And I think its located at the path "/test_files/"
-	But it doesnt exists in a network share host called "10.0.0.1"
+	And its at a network share host called "10.0.0.1"
+	But it doesnt exists at the network share host
 	When I press load
 	Then the application should notify me the file doesnt exists
 
 Scenario: Read a text file that exists from an internet server
 	Given I want to load a file called "inet_scores.txt"
 	And I think its located at the path "Bowling_Scoreboard/test_files/"
-	And it exists in an internet server called "frxbr.github.com"
+	And its at an internet server called "frxbr.github.com"
+	And it exists at the internet server
 	When I press load
 	Then the application should load the file
 
 Scenario: Read a text file that doesnt exists from an internet server
 	Given I want to load a file called "404.txt"
 	And I think its located at the path "Bowling_Scoreboard/test_files/"
-	But it doesnt exists in an internet server called "frxbr.github.com"
+	And its at an internet server called "frxbr.github.com"
+	But it doesnt exists at the internet server
 	When I press load
 	Then the application should notify me the file doesnt exists
