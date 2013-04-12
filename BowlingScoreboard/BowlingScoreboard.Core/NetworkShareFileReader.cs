@@ -18,17 +18,28 @@ namespace BowlingScoreboard.Core
             Text = string.Empty;
         }
 
-        public  string NetworkShareHostName
+        public NetworkShareFileReader()
+            : this(string.Empty)
+        {
+        }
+
+        public string NetworkShareHostName
         {
             get { return _networkShareHostName; }
             set { _networkShareHostName = value; }
         }
+
         public FileReadStatus FileReadStatus { get; private set; }
         public string Text { get; private set; }
 
         public void LoadFile(string path)
         {
             var uncPath = string.Format(@"\\{0}{1}", _networkShareHostName, path);
+
+            if (string.IsNullOrWhiteSpace(_networkShareHostName))
+            {
+
+            }
 
             if (!File.Exists(uncPath))
             {

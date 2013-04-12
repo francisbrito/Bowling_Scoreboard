@@ -19,6 +19,12 @@ namespace BowlingScoreboard.Core
             Text = string.Empty;
         }
 
+        public InternetFileReader()
+            : this(string.Empty)
+        {
+            
+        }
+
         public string InternetServerName
         {
             get { return _internetServerName; }
@@ -31,6 +37,11 @@ namespace BowlingScoreboard.Core
         public void LoadFile(string path)
         {
             var uri = string.Format("http://{0}/{1}", _internetServerName, path);
+
+            if (string.IsNullOrWhiteSpace(_internetServerName))
+            {
+                uri = path;
+            }
 
             var request = (HttpWebRequest)WebRequest.Create(uri);
 

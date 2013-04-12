@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreboard.Specs", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreboard.Core", "BowlingScoreboard.Core\BowlingScoreboard.Core.csproj", "{C8EFA3ED-D7C9-4395-908C-2835050C9E99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreboard.Clients.Wpf", "BowlingScoreboard.Clients.Wpf\BowlingScoreboard.Clients.Wpf.csproj", "{491E6760-5427-4889-A401-C77CF1B65F56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491E6760-5427-4889-A401-C77CF1B65F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491E6760-5427-4889-A401-C77CF1B65F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491E6760-5427-4889-A401-C77CF1B65F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491E6760-5427-4889-A401-C77CF1B65F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
