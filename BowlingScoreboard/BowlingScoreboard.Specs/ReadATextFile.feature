@@ -19,16 +19,16 @@ Scenario: Read a text file that doesnt exists from local file system
 
 Scenario: Read a text file that exists from a network share
 	Given I want to load a file called "net_scores.txt"
-	And I think its located at the path "/test_files/"
-	And its at a network share host called "10.0.0.1"
+	And I think its located at the path "/Users/Public/test_files/"
+	And its at a network share host called "ANDROMEDA"
 	And it exists at the network share host
 	When I press load
 	Then the application should load the file
 
 Scenario: Read a text file that doesnt exists from a network share
 	Given I want to load a file called "net_unexistent.txt"
-	And I think its located at the path "/test_files/"
-	And its at a network share host called "10.0.0.1"
+	And I think its located at the path "/Users/Public/test_files/"
+	And its at a network share host called "ANDROMEDA"
 	But it doesnt exists at the network share host
 	When I press load
 	Then the application should notify me the file doesnt exists

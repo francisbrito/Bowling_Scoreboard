@@ -124,9 +124,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 21
  testRunner.Given("I want to load a file called \"net_scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"/Users/Public/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.And("its at a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("its at a network share host called \"ANDROMEDA\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
  testRunner.And("it exists at the network share host", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
@@ -148,9 +148,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 29
  testRunner.Given("I want to load a file called \"net_unexistent.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"/Users/Public/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.And("its at a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("its at a network share host called \"ANDROMEDA\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.But("it doesnt exists at the network share host", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 33

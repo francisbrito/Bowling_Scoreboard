@@ -16,6 +16,7 @@ namespace BowlingScoreboard.Core
             _internetServerName = internetServerName;
 
             FileReadStatus = FileReadStatus.NotLoaded;
+            Text = string.Empty;
         }
 
         public string InternetServerName

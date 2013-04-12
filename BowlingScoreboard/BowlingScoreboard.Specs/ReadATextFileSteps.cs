@@ -21,16 +21,42 @@ namespace BowlingScoreboard.Specs
         [BeforeTestRun]
         public static void SetupTestFiles()
         {
+            #region For local FS
+
             Directory.CreateDirectory("./test_files");
 
             File.CreateText("./test_files/scores.txt").Close();
+            #endregion
+            #region For network share
+
+            var dirPath = Path.Combine(@"//ANDROMEDA", "Users/Public/test_files");
+            Directory.CreateDirectory(dirPath);
+
+            var filePath = Path.Combine(dirPath, "net_scores.txt");
+            File.CreateText(filePath).Close();
+
+            #endregion
         }
 
         [AfterTestRun]
         public static void CleanUpTestFiles()
         {
+            #region For local FS
+
             File.Delete("./test_files/scores.txt");
             Directory.Delete("./test_files");
+
+            #endregion
+
+            #region For network share
+
+            var dirPath = Path.Combine(@"\\ANDROMEDA", "Users/Public/test_files");
+            var filePath = Path.Combine(dirPath, "net_scores.txt");
+
+            File.Delete(filePath);
+            Directory.Delete(dirPath);
+
+            #endregion
         }
         #endregion
 
