@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Bowling Scoreboard Application.exe" version="0.0.0.1" publicKeyToken="9e4697e55bcfdec8" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:publisher="IDS317G1" co.v1:suiteName="Apps 4 Game Consultants" asmv2:product="Bowling Scoreboard Application" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Bowling Scoreboard Application" version="0.0.0.1" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Bowling Scoreboard Application.exe" parameters="" />
+  </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" ID="Custom" SameSite="site">
+          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Access="Open" />
+          <IPermission UserQuota="1024000" version="1" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Allowed="ApplicationIsolationByUser" />
+          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Execution" />
+          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Clipboard="OwnClipboard" Window="SafeTopLevelWindows" />
+          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="SafePrinting" />
+          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
+          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
+        </PermissionSet>
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bowling Scoreboard Application.exe" size="11264">
+      <assemblyIdentity name="Bowling Scoreboard Application" version="0.0.0.1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>u85KNBwoDqggxLQ242iLamb/m6k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BowlingScoreboard.Core.dll" size="7168">
+      <assemblyIdentity name="BowlingScoreboard.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dAk/pK6grHfa+2fehqrTYpjqyc8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=ANDROMEDA\frxbr" issuerKeyHash="1d2933b36d61f01f6211ad5431423e31fd79d1bc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>EJ2p6ZXdkr+tRmZnGSAnfMFza8w=</DigestValue></Reference></SignedInfo><SignatureValue>LiqdYZXaxZw10jiUC+CReMBRVQ1NwHbl4FeTFz0UpHFCZXCrVqe/ErWRKaiT9PkVo5z9y1N04Ld470PqpmaVF6jFkrzCjlt0mS2aUbmF+E/9SW0E5vmFaaaxNErZ+uMfEVlK8lWhXbY4nS/fy4FbcleG4p1ztkKQ5CjHkivt7bo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pPEcLcMjjXanBJUf6MBevb9X7lKITJRy6inR2NhgT2JDkek4daCR8QaQ4kyVCc43TOG8FN/fBMEDySsT4LwUfXMp3BVJI0soj0f+rDO+3HZHZeTtXrOpesG8xt+bu/X43qSz4aSImNjs5lPArv12nFTI+ZNIjbbC7rd1fFVAE2s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="cc6b73c17c272019676646adbf92dd95e9a99d10" Description="" Url=""><as:assemblyIdentity name="Bowling Scoreboard Application.exe" version="0.0.0.1" publicKeyToken="9e4697e55bcfdec8" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ANDROMEDA\frxbr</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>jPbmBFrtoToAVq3VcUnGwx1TvjA=</DigestValue></Reference></SignedInfo><SignatureValue>j8d41C0gS6wDJ9avLx3etT0UxTjPOZWxxAtNOGc7fMwW77HXXHpi7jc2LwUUTPitYAaliNu/kEGXCmyS4c2E+AU9LgbOxQVoThmw7S4QuljKZGCCVkrWLbtvwPPLLqqpWL85X3UDY96MDHd6prptgAGowFGVajhBn1OmVLDIjOU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pPEcLcMjjXanBJUf6MBevb9X7lKITJRy6inR2NhgT2JDkek4daCR8QaQ4kyVCc43TOG8FN/fBMEDySsT4LwUfXMp3BVJI0soj0f+rDO+3HZHZeTtXrOpesG8xt+bu/X43qSz4aSImNjs5lPArv12nFTI+ZNIjbbC7rd1fFVAE2s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQajfTnkwhPItLE+ARx+qVLzANBgkqhkiG9w0BAQUFADApMScwJQYDVQQDHh4AQQBOAEQAUgBPAE0ARQBEAEEAXABmAHIAeABiAHIwHhcNMTMwNDEyMjExODIzWhcNMTQwNDEzMDMxODIzWjApMScwJQYDVQQDHh4AQQBOAEQAUgBPAE0ARQBEAEEAXABmAHIAeABiAHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKTxHC3DI412pwSVH+jAXr2/V+5SiEyUcuop0djYYE9iQ5HpOHWgkfEGkOJMlQnON0zhvBTf3wTBA8krE+C8FH1zKdwVSSNLKI9H/qwzvtx2R2Xk7V6zqXrBvMbfm7v1+N6ks+GkiJjY7OZTwK79dpxUyPmTSI22wu63dXxVQBNrAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAciDMSpKyAyjjyg+p7YpVP0F9zm1b0lqxza5B+lw8gneu2OY1np1vMi8cwMkkupnFX7LaVCfYOUwwPW4eE7+9vlFmnpj9Mc/k7eumTPEqSqWP2zgURUpIG6B87/UobEING3Xf8uSDU7DdoeeVgX/F4DPXYr4q53iNRFxEyYqZe38=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
