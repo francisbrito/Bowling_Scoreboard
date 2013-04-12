@@ -31,7 +31,7 @@ namespace BowlingScoreboard.Specs
         {
             File.Delete("./test_files/scores.txt");
             Directory.Delete("./test_files");
-        } 
+        }
         #endregion
 
         [Given(@"I want to load a file called ""(.*)""")]
@@ -132,8 +132,8 @@ namespace BowlingScoreboard.Specs
 
             try
             {
-                var request = (HttpWebRequest) WebRequest.Create(uri);
-                response = (HttpWebResponse) request.GetResponse();
+                var request = (HttpWebRequest)WebRequest.Create(uri);
+                response = (HttpWebResponse)request.GetResponse();
             }
             catch (WebException ex)
             {
@@ -158,7 +158,8 @@ namespace BowlingScoreboard.Specs
             }
             catch (WebException ex)
             {
-                Assert.Fail(ex.Message, ex.Response);
+                //Assert.Fail(ex.Message, ex.Response);
+                response = (HttpWebResponse)ex.Response;
             }
 
             // It should be a 404 (Not Found)

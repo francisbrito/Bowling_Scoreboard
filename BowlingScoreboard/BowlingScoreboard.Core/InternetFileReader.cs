@@ -31,8 +31,24 @@ namespace BowlingScoreboard.Core
         {
             var uri = string.Format("http://{0}/{1}", _internetServerName, path);
 
-            var request = (HttpWebRequest) WebRequest.Create(uri);
-            var response = (HttpWebResponse) request.GetResponse();
+            var request = (HttpWebRequest)WebRequest.Create(uri);
+
+            HttpWebResponse response = null;
+
+            // NOTE:
+            // This is a trick to get request/response kind of behavior working.
+            // HttpWebRequest#GetResponse() throws an exception if the URL cannot be reached
+            // instead of returning a 404!!
+            // So the best course of action is to catch the exception an use it's Response property
+            // to get the status code from the response.
+            try
+            {
+                response = (HttpWebResponse)request.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                response = (HttpWebResponse)ex.Response;
+            }
 
             var httpStatusCode = response.StatusCode;
 
