@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using BowlingScoreboard.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TechTalk.SpecFlow;
@@ -70,13 +71,14 @@ namespace BowlingScoreboard.Specs
         [Then(@"the application should notify me the file doesnt exists")]
         public void ThenTheApplicationShouldNotifyMeTheFileDoesntExists()
         {
-            Assert.IsTrue(_reader.FileReadStatus == FileReadStatus.NotFound);
+            Assert.IsTrue(_fileReader.FileReadStatus == FileReadStatus.NotFound);
         }
 
         [Given(@"its at a network share host called ""(.*)""")]
         public void GivenItsAtANetworkShareHostCalled(string networkShareHostName)
         {
             _networkShareHostName = networkShareHostName;
+
             _fileReader = new NetworkShareFileReader(networkShareHostName);
         }
 

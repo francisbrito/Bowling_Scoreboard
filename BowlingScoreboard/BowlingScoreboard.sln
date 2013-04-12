@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreboard.Specs", "BowlingScoreboard.Specs\BowlingScoreboard.Specs.csproj", "{72771495-BDF1-4E04-BB8D-F5B3BA8ED080}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreboard.Core", "BowlingScoreboard.Core\BowlingScoreboard.Core.csproj", "{C8EFA3ED-D7C9-4395-908C-2835050C9E99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{72771495-BDF1-4E04-BB8D-F5B3BA8ED080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72771495-BDF1-4E04-BB8D-F5B3BA8ED080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72771495-BDF1-4E04-BB8D-F5B3BA8ED080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8EFA3ED-D7C9-4395-908C-2835050C9E99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
