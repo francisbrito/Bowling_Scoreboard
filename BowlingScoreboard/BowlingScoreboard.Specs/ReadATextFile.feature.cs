@@ -80,9 +80,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.Given("I want to load a file called \"scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And("I think its located at the directory \"./test_files/\" in my local file system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"./test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("it exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("it exists in my local file system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
@@ -102,9 +102,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 14
  testRunner.Given("I want to load a file called \"unexistent.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
- testRunner.And("I think its located at the directory \"./test_files/\" in my local file system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"./test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.But("it doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+ testRunner.But("it doesnt exists in my local file system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 17
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
@@ -124,10 +124,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 21
  testRunner.Given("I want to load a file called \"net_scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.And("I think its located at the directory \"/test_files/\" in a network share host calle" +
-                    "d \"//10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.And("it exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("it exists in a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
@@ -147,10 +146,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 28
  testRunner.Given("I want to load a file called \"net_unexistent.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
- testRunner.And("I think its located at the directory \"/test_files/\" in a network share host calle" +
-                    "d \"//10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
- testRunner.But("it doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+ testRunner.But("it doesnt exists in a network share host called \"10.0.0.1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 31
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
@@ -170,10 +168,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 35
  testRunner.Given("I want to load a file called \"inet_scores.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 36
- testRunner.And("I think its located at the directory \"/Bowling_Scoreboard/test_files/\" in a  inte" +
-                    "rnet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
- testRunner.And("it doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("it exists in an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
@@ -193,10 +190,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 42
  testRunner.Given("I want to load a file called \"404.txt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 43
- testRunner.And("I think its located at the directory \"/Bowling_Scoreboard/test_files/\" in a  inte" +
-                    "rnet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I think its located at the path \"Bowling_Scoreboard/test_files/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 44
- testRunner.But("it doesnt exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+ testRunner.But("it doesnt exists in an internet server called \"frxbr.github.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 45
  testRunner.When("I press load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 46

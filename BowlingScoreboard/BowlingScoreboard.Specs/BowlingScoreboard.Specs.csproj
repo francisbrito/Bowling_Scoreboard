@@ -62,7 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReadATextFile.feature</DependentUpon>
     </Compile>
-    <Compile Include="ReadATextFileSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
