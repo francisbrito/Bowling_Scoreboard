@@ -13,7 +13,9 @@ namespace BowlingScoreboard.Core
         }
 
         public FileReadStatus FileReadStatus { get; private set; }
-        public string LoadFile(string path)
+        public string Text { get; private set; }
+
+        public void LoadFile(string path)
         {
             throw new NotImplementedException();
         }

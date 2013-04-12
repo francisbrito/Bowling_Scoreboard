@@ -17,6 +17,23 @@ namespace BowlingScoreboard.Specs
         private string _networkShareHostName;
         private string _internetServerName;
 
+        #region Setup & Clean up
+        [BeforeTestRun]
+        public static void SetupTestFiles()
+        {
+            Directory.CreateDirectory("./test_files");
+
+            File.CreateText("./test_files/scores.txt").Close();
+        }
+
+        [AfterTestRun]
+        public static void CleanUpTestFiles()
+        {
+            File.Delete("./test_files/scores.txt");
+            Directory.Delete("./test_files");
+        } 
+        #endregion
+
         [Given(@"I want to load a file called ""(.*)""")]
         public void GivenIWantToLoadAFileCalled(string fileName)
         {
@@ -109,10 +126,19 @@ namespace BowlingScoreboard.Specs
         [Given(@"it exists at the internet server")]
         public void GivenItExistsAtTheInternetServer()
         {
-            var uri = string.Format("http://{0}{1}{2}", _internetServerName, _filePath, _fileName);
+            var uri = string.Format("http://{0}/{1}/{2}", _internetServerName, _filePath, _fileName);
 
-            var request = (HttpWebRequest) WebRequest.Create(uri);
-            var response = (HttpWebResponse) request.GetResponse();
+            HttpWebResponse response = null;
+
+            try
+            {
+                var request = (HttpWebRequest) WebRequest.Create(uri);
+                response = (HttpWebResponse) request.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                Assert.Fail(ex.Message, ex.Response);
+            }
 
             // It should be a 200 (OK)
             Assert.IsTrue(response.StatusCode == HttpStatusCode.OK);
@@ -121,10 +147,19 @@ namespace BowlingScoreboard.Specs
         [Given(@"it doesnt exists at the internet server")]
         public void GivenItDoesntExistsAtTheInternetServer()
         {
-            var uri = string.Format("http://{0}{1}{2}", _internetServerName, _filePath, _fileName);
+            var uri = string.Format("http://{0}/{1}/{2}", _internetServerName, _filePath, _fileName);
 
-            var request = (HttpWebRequest)WebRequest.Create(uri);
-            var response = (HttpWebResponse)request.GetResponse();
+            HttpWebResponse response = null;
+
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create(uri);
+                response = (HttpWebResponse)request.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                Assert.Fail(ex.Message, ex.Response);
+            }
 
             // It should be a 404 (Not Found)
             Assert.IsTrue(response.StatusCode == HttpStatusCode.NotFound);

@@ -8,6 +8,7 @@ namespace BowlingScoreboard.Core
     public interface IFileReader
     {
         FileReadStatus FileReadStatus { get; }
-        string LoadFile(string path);
+        string Text { get; }
+        void LoadFile(string path);
     }
 }
