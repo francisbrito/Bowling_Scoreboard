@@ -63,6 +63,12 @@
       <DependentUpon>ReadATextFile.feature</DependentUpon>
     </Compile>
     <Compile Include="ReadATextFileSteps.cs" />
+    <Compile Include="SupportVariousTextFileFormats.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupportVariousTextFileFormats.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SupportVariousTextFileFormatsSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +76,10 @@
     <None Include="ReadATextFile.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ReadATextFile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SupportVariousTextFileFormats.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SupportVariousTextFileFormats.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultFileFormatValidator.cs" />
+    <Compile Include="IFileFormatValidator.cs" />
     <Compile Include="IFileReader.cs" />
     <Compile Include="FileReadStatus.cs" />
     <Compile Include="InternetFileReader.cs" />
