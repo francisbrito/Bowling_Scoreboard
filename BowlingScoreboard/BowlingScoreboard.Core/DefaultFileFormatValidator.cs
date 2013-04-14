@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace BowlingScoreboard.Core
 {
@@ -9,7 +10,16 @@ namespace BowlingScoreboard.Core
     {
         public bool IsValid(string input)
         {
-            throw new NotImplementedException();
+            var result = true;
+
+            var entries = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (entries.Count() != 42)
+            {
+                result = false;
+            }
+
+            return result;
         }
     }
 }
