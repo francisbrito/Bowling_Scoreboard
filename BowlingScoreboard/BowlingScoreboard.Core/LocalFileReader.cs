@@ -25,9 +25,17 @@ namespace BowlingScoreboard.Core
             }
             else
             {
-                Text = File.ReadAllText(path);
+                try
+                {
+                    Text = File.ReadAllText(path);
+                    FileReadStatus = FileReadStatus.Loaded;
+                }
+                catch (UnauthorizedAccessException ex)
+                {
+                    var msg = string.Format("Unable to open file {0} due to its access rights.", path);
 
-                FileReadStatus = FileReadStatus.Loaded;
+                    throw new UnauthorizedAccessException(msg, ex);
+                }
             }
         }
     }

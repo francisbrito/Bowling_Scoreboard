@@ -53,8 +53,12 @@ namespace BowlingScoreboard.Core
 
                     FileReadStatus = FileReadStatus.Loaded;
                 }
-                // May happen if the connection is forcefully closed.
-                catch (IOException)
+                catch (UnauthorizedAccessException ex)
+                {
+                    var msg = string.Format("Unable to load file {0} due to its access rights.", uncPath);
+                    throw new UnauthorizedAccessException(msg, ex);
+                }
+                catch (IOException ex)
                 {
                     FileReadStatus = FileReadStatus.NotLoaded;
                 }
