@@ -3,5 +3,55 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="ApplicationTitle"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="20">
+            Bowling Game Score
+        </TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="FilePathTextBox"
+                     Margin="5"></TextBox>
+            <Button Grid.Column="1" 
+                x:Name="LoadData"
+                Margin="5"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch">
+                Upload
+            </Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label>First Player</Label>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label>Second Player</Label>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button HorizontalAlignment="Right" Style="{StaticResource NavigationButton}" x:Name="PreviousButton">&lt;</Button>
+            <Button HorizontalAlignment="Left" Style="{StaticResource NavigationButton}" Grid.Column="1" x:Name="ForwardButton">&gt;</Button>
+        </Grid>
     </Grid>
 </Window>
