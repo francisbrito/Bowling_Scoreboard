@@ -4,7 +4,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="35"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -22,12 +22,13 @@
                 <ColumnDefinition Width="100"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="FilePathTextBox"
-                     Margin="5"></TextBox>
+                     Margin="5"
+                     IsReadOnly="True"></TextBox>
             <Button Grid.Column="1" 
                 x:Name="LoadData"
                 Margin="5"
                 VerticalAlignment="Stretch"
-                HorizontalAlignment="Stretch">
+                HorizontalAlignment="Stretch" Click="LoadData_Click">
                 Upload
             </Button>
         </Grid>
