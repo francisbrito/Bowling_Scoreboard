@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="BowlingScoreboard.Clients.Wpf.Views.FrameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:BowlingScoreboard.Clients.Wpf.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100"
+             MaxHeight="100" MaxWidth="100">
+    <UserControl.DataContext>
+        <vm:FrameViewModel></vm:FrameViewModel>
+    </UserControl.DataContext>
+    <Border
+        BorderThickness="1"
+        BorderBrush="Black">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                Margin="5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Text="{Binding FirstThrow.PinsDown}">
+                </TextBlock>
+                <Border 
+                    Grid.Column="1"
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Text="{Binding SecondThrow.PinsDown}">
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <TextBlock
+                Margin="5"
+                FontSize="36"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Row="1"
+                Text="{Binding Score}">
+            </TextBlock>
+        </Grid>
+    </Border>
+</UserControl>

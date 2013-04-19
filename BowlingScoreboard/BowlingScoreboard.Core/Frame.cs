@@ -7,15 +7,21 @@ namespace BowlingScoreboard.Core
 {
     public class Frame
     {
+        public Frame()
+        {
+            Throws = new Throw[]
+                {
+                    new Throw(),
+                    new Throw(),
+                    new Throw(), 
+                };
+        }
+
         public Throw[] Throws { get; set; }
 
         public int Score { get; set; }
 
-        public object Type
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public FrameType Type { get; set; }
     }
 
     public enum FrameType

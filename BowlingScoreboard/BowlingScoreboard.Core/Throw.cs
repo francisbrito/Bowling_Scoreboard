@@ -7,6 +7,16 @@ namespace BowlingScoreboard.Core
 {
     public class Throw
     {
+        public Throw()
+        {
+            PinsDown = 0;
+        }
+
+        public Throw(string entry)
+        {
+            PinsDown = int.Parse(entry);
+        }
+
         public int PinsDown { get; set; }
 
     }
