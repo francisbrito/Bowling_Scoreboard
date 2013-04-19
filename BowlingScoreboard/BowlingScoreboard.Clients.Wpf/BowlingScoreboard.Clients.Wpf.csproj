@@ -28,12 +28,12 @@
     <ProductName>Bowling Scoreboard Application</ProductName>
     <PublisherName>IDS317G1</PublisherName>
     <SuiteName>Apps 4 Game Consultants</SuiteName>
-    <MinimumRequiredVersion>0.0.0.2</MinimumRequiredVersion>
+    <MinimumRequiredVersion>0.1.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>0.0.0.2</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.1.0.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
